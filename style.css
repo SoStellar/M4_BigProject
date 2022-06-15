@@ -2,10 +2,47 @@ body > .container {
     margin: 20px;
     padding: 20px;
     border-style: none;
+    object-fit: cover;
 }
 .card > img{
     margin: 0.8rem;
     padding: 0.8rem;
     height: 20vh;
     object-fit: contain;
+}
+
+.img-banner{
+    width: 100%;
+    height: 27em;
+    object-fit: cover;
+}
+.banner-center {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    font-weight: bolder;
+    color:darkgoldenrod;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+
+.favorite-title {
+    font-size: large;
+}
+.detail-name{
+    font-size: xx-large;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+.score1{
+    background-color:darkblue;
+    color: azure;
+}
+.score2{
+    font-weight: bolder;
+}
+.rank{
+
 }
