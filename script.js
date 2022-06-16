@@ -5,11 +5,11 @@ var searchAniSec = document.getElementById('searchAnimeSection')
 var detailSec = document.getElementById('detailSection')
 var animeIdGET = ''
 function hideAll(){
-    favSec.style.display = 'none'
+    /*favSec.style.display = 'none'
     liveAniSec.style.display = 'none'
     popAniSec.style.display = 'none'
     searchAniSec.style.display = 'none'
-    detailSec.style.display = 'none'
+    detailSec.style.display = 'none'*/
 }
 function displayHomepage(){
     hideAll()
@@ -53,25 +53,31 @@ function addTableLive(animeDe){
     })
 }
 function addTableFav(animeDe){
-    const popAniSec = document.getElementById('popularAniSec')
-    let popitem1 = document.createElement('div')
-    popitem1.classList.add('col')
-    let popitem2 = document.createElement('div')
-    popitem2.classList.add('card')
-    let popImg = document.createElement('img')
-    popImg.setAttribute('src', animeDe.images.jpg.large_image_url)
-    popImg.classList.add('card-img-top')
-    popitem2.appendChild(popImg)
-    let popcardBody = document.createElement('div')
-    popcardBody.classList.add('card-body')
-    let popcardTitle = document.createElement('h5')
-    popcardTitle.classList.add('card-title')
-    popcardTitle.innerHTML = animeDe.title
-    popcardBody.appendChild(popcardTitle)
-    popitem2.appendChild(popcardBody)
-    popitem1.appendChild(popitem2)
-    popAniSec.appendChild(popitem1)
-    popitem1.addEventListener('click',function (){
+    const favAniSec = document.getElementById('favSec')
+    let favitem1 = document.createElement('div')
+    favitem1.classList.add('col')
+    let favitem2 = document.createElement('div')
+    favitem2.classList.add('card')
+    let favImg = document.createElement('img')
+    favImg.setAttribute('src', animeDe.images.jpg.large_image_url)
+    favImg.classList.add('card-img-top')
+    favitem2.appendChild(favImg)
+    let favcardBody = document.createElement('div')
+    favcardBody.classList.add('card-body')
+    let favcardTitle = document.createElement('h5')
+    favcardTitle.classList.add('card-title')
+    favcardTitle.innerHTML = animeDe.title
+    let favDelBtn = document.createElement('button')
+    favDelBtn.classList.add('btn')
+    favDelBtn.classList.add('btn-danger')
+    favDelBtn.setAttribute('type','button')
+    favDelBtn.innerHTML = 'Delete'
+    favcardBody.appendChild(favDelBtn)
+    favitem2.appendChild(favDelBtn)
+    favitem2.appendChild(favcardBody)
+    favitem1.appendChild(favitem2)
+    favAniSec.appendChild(favitem1)
+    favitem1.addEventListener('click',function (){
         displayDetails()
         showDetailSec(animeDe)
     })
@@ -189,6 +195,7 @@ function onLoad() {
             displayHomepage()
             console.log(animeDe)
             addNowAniList(animeDe)
+            addTableFav(animeDe)
         })
     })
     fetch('https://api.jikan.moe/v4/top/anime').then(response => {
@@ -235,10 +242,26 @@ function addAniToFavoriteList(animeDe) {
     })
 }
 document.getElementById('addFavBtn').addEventListener('click',(event) =>{
-    fetch('https://se104-project-backend.du.r.appspot.com/movies/642110318').then(response => {
-        return response.json().then(data => {
-            console.log(data)
-            addAniToFavoriteList(data)
-        })
-    })
+    let confirmButton = confirm(`Add ${movie.title} to your favorites`)
+    if (confirmButton) {
+        poom2.style.backgroundColor = 'red';
+        poom2.style.color = 'white';
+        poom2.classList.add('disabled')
+
+        const addMovie = {
+            id: '642110323',
+            movie: {
+                url: movie.url,
+                image_url: movie.images.jpg.image_url,
+                title: movie.title,
+                synopsis: movie.synopsis,
+                type: movie.type,
+                episodes: movie.episodes,
+                score: movie.score,
+                rated: movie.rating,
+            },
+        };
+        console.log(addMovie)
+        addMovieToFavoriteList(addMovie)
+    }
 })
