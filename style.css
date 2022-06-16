@@ -42,11 +42,14 @@ body > .container {
 }
 .score2{
     font-weight: bolder;
-    
+    font-size: x-large;   
 }
 .score3{
     font-size: small;
 }
-.rank{
-
+.headerName{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    font-style: oblique;
 }
