@@ -21,8 +21,8 @@
         </svg>
       </a>
       <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="#" class="nav-link px-2 link-light header" id="home">Home</a></li>
-        <li><a href="#" class="nav-link px-2 link-light header" id="favorite">Favorites</a></li>
+        <li><a href="#" class="nav-link px-2 link-light header" id="home" onclick="onLoad()">Home</a></li>
+        <li><a href="#" class="nav-link px-2 link-light header" id="favorite" onclick="onFav()">Favorites</a></li>
       </ul>
 
       <form class="col-12 my-2 col-lg-auto  mb-lg-0 me-lg-3">
@@ -33,7 +33,7 @@
     <div class="row">
       <div class="container-fluid px-0 pb-2" id="banner">
         <img src="https://img.wallpapersafari.com/desktop/1920/1080/10/6/EoGT6r.jpg" class="img-banner" alt="banner">
-        <div class="banner-center">Godzilla Anime ZONE</div>
+        <div class="d-flex justify-content-center banner-center">Godzilla Anime ZONE</div>
       </div>
     </div>
     <div class="row pb-5 px-3" id="favoriteSection">
@@ -79,122 +79,36 @@
     <div class="row pb-5 px-3">
       <div class="row pb-3 px-3">
         <div class="container-fluid px-5" id="liveAnimeSection">
-          <div class="favorite-title pb-2"><span class="row border-bottom border-dark">Anime Trending</span></div>
-          <div class="row row-cols-1 row-cols-md-6 g-4" id="liveAniSec">
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                </div>
-              </div>
-            </div>
-            <div class="col">
-              <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                </div>
-              </div>
-            </div>
+          <div class="live-title pb-2"><span class="row border-bottom border-dark">Anime Trending</span></div>
+          <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4" id="liveAniSec">
+            
           </div>
         </div>
         <div class="row pb-3 px-3" id="popularAnimeSection">
           <div class="container-fluid px-5">
-            <div class="favorite-title py-2"><span class="row border-bottom border-dark">Popular Anime</span></div>
-            <div class="row row-cols-1 row-cols-md-6 g-4" id="popularAniSec">
-              <div class="col">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                  </div>
-                </div>
-              </div>
-              <div class="col">
-                <div class="card">
-                  <img src="..." class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                  </div>
-                </div>
-              </div>
+            <div class="popular-title py-2"><span class="row border-bottom border-dark">Popular Anime</span></div>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4" id="popularAniSec">
+              
+            </div>
+          </div>
+        </div>
+        <div class="row pb-3 px-3" id="searchAnimeSection">
+          <div class="container-fluid px-5">
+            <div class="search-title py-2"><span class="row border-bottom border-dark" id="searchName"></span></div>
+            <div class="row row-cols-1 row-cols-md-3 row-cols-lg-6 g-4" id="searchAniSec">
+              
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="row pb-5 px-3" id="detailSection">
+    <div class="row pb-3 px-3" id="detailSection">
       <span id="detailName">Anime Title</span>
       <div class="row">
-        <div class="col-4">
+        <div class="col-3">
           <img src="#" alt="anime-image" id="animeImage">
         </div>
-        <div class="col-1">
+        <div class="col-md-1 col-sm-12">
           <div class="row">
             <span class="score1">Score</span>
           </div>
@@ -202,31 +116,31 @@
             <span class="score2" id="score">X.XX</span>
           </div>
           <div class="row">
-            <span id="userScored">X users</span>
+            <span id="userScored" class="score3">X users</span>            
           </div>
         </div>
-        <div class="col-3">
+        <div class="col-md-6 col-sm-12">
           <div class="row">
-            <div class="col-4"><span class="rank" id="rank">Ranked #XX</span></div>
-            <div class="col-4"><span class="popular" id="popular">Popularity #XX</span></div>
-            <div class="col-4"><span class="member" id="member">Members XXXXXX</span></div>
+            <div class="col-md-4 col-sm-12"><span class="rank" id="rank">Ranked #XX</span></div>
+            <div class="col-md-4 col-sm-12"><span class="popular" id="popular">Popularity #XX</span></div>
+            <div class="col-md-4 col-sm-12"><span class="member" id="member">Members XXXXXX</span></div>
           </div>
           <div class="row">
-            <span></span>
+            <br>
           </div>
           <div class="row">
-            <div class="col-4">
+            <div class="col-md-4 col-sm-12">
               <span id="season">Season</span>
             </div>
-            <div class="col-4">
+            <div class="col-md-4 col-sm-12">
               <span id="type">TV</span>
             </div>
-            <div class="col-4">
-              <span id="studio">Studio</span>
+            <div class="col-md-4 col-sm-12">
+              <span id="episodes">Episodes</span>
             </div>
           </div>
         </div>
-        <div class="col-1">
+        <div class="col-md-1 col-sm-12">
           <button type="button" class="btn btn-primary btn-lg" id="addFavBtn"><i class="bi bi-suit-heart"></i>Add to Favorites</button>
         </div>
       </div>
@@ -238,7 +152,7 @@
         </div>
         <div class="d-flex justify-content-center">
           <div class="row">
-            <span id="synosis">Text</span>
+            <span id="synopsis">Text</span>
           </div>
         </div>
     </div>
@@ -257,24 +171,24 @@
       </div>
     </div>
     <div class="row d-flex justify-content-center px-10">
-      <div class="col-1">
+      <div class="col-md-1 col-sm-12">
         <div style="font-size:small; font-weight: bold;">Follow us on</div>
       </div>
-      <div class="col-1">
+      <div class="col-md-1 col-sm-3">
         <div><i class="bi bi-facebook">Facebook</i></div>
       </div>
-      <div class="col-1">
+      <div class="col-md-1 col-sm-3">
         <div><i class="bi bi-pinterest">Pinterest</i></div>
       </div>
-      <div class="col-1">
+      <div class="col-md-1 col-sm-3">
         <div><i class="bi bi-twitter">Twitter</i></div>
       </div>
-      <div class="col-1">
+      <div class="col-md-1 col-sm-3">
         <div style="font-size: small;"><i class="bi bi-google">Google Plus</i></div>
       </div>
     </div>
     <div class="row d-flex justify-content-center px-10 py-4">
-      <div class="col-2">
+      <div class="col-md-2 col-sm-12">
         <div style="font-size:small; font-weight: bold;">&copy;2022 Godzilla Inc.</div>
       </div>
     </div>

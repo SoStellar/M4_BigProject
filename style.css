@@ -17,8 +17,8 @@ body > .container {
     object-fit: cover;
 }
 .banner-center {
-    position: absolute;
-    top: 30%;
+    position:relative;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
     font-size: 3em;
@@ -42,6 +42,10 @@ body > .container {
 }
 .score2{
     font-weight: bolder;
+    
+}
+.score3{
+    font-size: small;
 }
 .rank{
 
